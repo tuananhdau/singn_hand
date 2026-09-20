@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Camera - SignTranslate</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+
+            font-family: Arial, sans-serif;
+
+            background: #f5f7fb;
+
+            color: #222;
+        }
+
+        header {
+            height: 70px;
+
+            background: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 50px;
+
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+
+            margin: 40px auto;
+
+            padding: 20px;
+        }
+
+        .title {
+            text-align: center;
+
+            margin-bottom: 30px;
+        }
+
+        .camera-container {
+            display: flex;
+
+            justify-content: center;
+        }
+
+        .camera-box {
+            width: 800px;
+
+            background: #111;
+
+            border-radius: 15px;
+
+            overflow: hidden;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .camera-box img {
+            display: block;
+
+            width: 100%;
+
+            height: auto;
+        }
+
+        .status {
+            text-align: center;
+
+            margin-top: 20px;
+
+            font-size: 18px;
+        }
+
+        .status span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <h1>🤟 SignTranslate</h1>
+
+    <a href="/">
+        ← Trang chủ
+    </a>
+
+</header>
+
+
+<div class="container">
+
+    <div class="title">
+
+        <h2>Camera nhận diện</h2>
+
+        <p>
+            Đưa bàn tay vào trước camera
+        </p>
+
+    </div>
+
+
+    <div class="camera-container">
+
+        <div class="camera-box">
+
+            <img
+                src="{{ url_for('video_feed') }}"
+                alt="Camera"
+            >
+
+        </div>
+
+    </div>
+
+
+    <div class="status">
+
+        Camera:
+        <span>🟢 Đang hoạt động</span>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
