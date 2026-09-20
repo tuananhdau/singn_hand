@@ -255,6 +255,10 @@ class Camera:
         # Prediction box
         # ------------------------------------------
 
+        height, width, _ = frame.shape
+        box_width = 300
+        box_height = 130
+
         x1 = 25
         y1 = height - box_height - 25
 

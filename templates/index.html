@@ -1,385 +1,498 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
-
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>SignBridge AI</title>
 
-    <link rel="stylesheet"
-          href="{{ url_for('static', filename='css/style.css') }}">
-
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
 </head>
-
 
 <body>
 
+<div class="app">
 
-<!-- SIDEBAR -->
+    <!-- ================= HEADER ================= -->
 
-<aside class="sidebar">
+    <header class="topbar">
 
-    <div class="logo">
-
-        <div class="logo-icon">
-            🤟
-        </div>
-
-        <div>
-            <h2>SIGNBRIDGE AI</h2>
-
-            <span>
-                Dịch ngôn ngữ ký hiệu
-            </span>
-        </div>
-
-    </div>
-
-
-    <nav class="menu">
-
-        <a href="/" class="menu-item active">
-
-            <span class="icon">⌂</span>
-
-            <span>Trang chủ</span>
-
-        </a>
-
-
-        <a href="/camera" class="menu-item">
-
-            <span class="icon">▣</span>
-
-            <span>Dịch (Camera)</span>
-
-        </a>
-
-
-        <a href="#" class="menu-item">
-
-            <span class="icon">▤</span>
-
-            <span>Từ điển ký hiệu</span>
-
-        </a>
-
-
-        <a href="#" class="menu-item">
-
-            <span class="icon">♧</span>
-
-            <span>Bài học</span>
-
-        </a>
-
-
-        <a href="#" class="menu-item">
-
-            <span class="icon">◷</span>
-
-            <span>Lịch sử</span>
-
-        </a>
-
-
-        <a href="#" class="menu-item">
-
-            <span class="icon">♡</span>
-
-            <span>Yêu thích</span>
-
-        </a>
-
-
-        <a href="#" class="menu-item">
-
-            <span class="icon">⚙</span>
-
-            <span>Cài đặt</span>
-
-        </a>
-
-    </nav>
-
-
-    <!-- USER -->
-
-    <div class="sidebar-bottom">
-
-        <div class="user-card">
-
-            <div class="avatar">
-                👤
-            </div>
-
-            <div class="user-info">
-
-                <small>Xin chào,</small>
-
-                <strong>User</strong>
-
-            </div>
-
-            <span class="pro">
-                PRO
-            </span>
-
-        </div>
-
-
-        <div class="dark-mode">
-
-            <span>
-                ☾ Chế độ tối
-            </span>
-
-            <div class="toggle"></div>
-
-        </div>
-
-
-        <div class="copyright">
-
-            © 2026 SignBridge AI
-
-            <br>
-
-            Phiên bản 1.0.0
-
-        </div>
-
-    </div>
-
-</aside>
-
-
-
-<!-- MAIN -->
-
-<main class="main">
-
-
-    <!-- TOP -->
-
-    <div class="topbar">
-
-        <div>
-
-            <h1>
-                Xin chào! 👋
-            </h1>
-
-            <p>
-                Chào mừng bạn đến với SignBridge AI -
-                Dịch ngôn ngữ ký hiệu thông minh
-            </p>
-
-        </div>
-
-
-        <div class="top-actions">
-
-            <button class="notification">
-                ♧
-
-                <span>3</span>
-
-            </button>
-
-
-            <button class="language">
-                VI ▼
-            </button>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- STATISTICS -->
-
-    <section class="stats">
-
-
-        <div class="stat-card">
-
-            <div class="stat-icon purple">
-                ▣
-            </div>
+        <div class="brand">
+            <div class="brand-icon">✋</div>
 
             <div>
-
-                <p>Lượt dịch hôm nay</p>
-
-                <h2>24</h2>
-
-                <span class="positive">
-                    ↑ 18% so với hôm qua
-                </span>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="stat-card">
-
-            <div class="stat-icon green">
-                ▤
-            </div>
-
-            <div>
-
-                <p>Từ/câu đã dịch</p>
-
-                <h2>1,248</h2>
-
-                <span>
-                    Tổng cộng
-                </span>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="stat-card">
-
-            <div class="stat-icon orange">
-                ◉
-            </div>
-
-            <div>
-
-                <p>Độ chính xác</p>
-
-                <h2>96.4%</h2>
-
-                <span>
-                    Rất tốt! 🎉
-                </span>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="stat-card">
-
-            <div class="stat-icon blue">
-                ♧
-            </div>
-
-            <div>
-
-                <p>Bài học đã hoàn thành</p>
-
-                <h2>12</h2>
-
-                <span>
-                    Tiến độ 60%
-                </span>
-
-                <div class="progress">
-
-                    <div style="width: 60%"></div>
-
+                <div class="brand-name">
+                    SIGNBRIDGE <span>AI</span>
                 </div>
 
+                <div class="brand-subtitle">
+                    Dịch ngôn ngữ ký hiệu
+                </div>
+            </div>
+        </div>
+
+
+        <nav class="navigation">
+
+            <a href="/" class="nav-item active">
+                Trang chủ
+            </a>
+
+            <a href="/camera" class="nav-item">
+                Dịch
+            </a>
+
+            <a href="#" class="nav-item">
+                Từ điển
+            </a>
+
+            <a href="#" class="nav-item">
+                Bài học
+            </a>
+
+            <a href="#" class="nav-item">
+                Lịch sử
+            </a>
+
+            <a href="#" class="nav-item">
+                Cài đặt
+            </a>
+
+        </nav>
+
+
+        <div class="profile">
+
+            <div class="profile-avatar">
+                U
+            </div>
+
+            <div class="profile-info">
+                <strong>User</strong>
+                <span>Người dùng</span>
             </div>
 
         </div>
 
-    </section>
+    </header>
 
 
+    <!-- ================= MAIN ================= -->
 
-    <!-- WORKSPACE -->
-
-    <section class="workspace">
+    <main class="main-container">
 
 
-        <!-- CAMERA -->
+        <!-- PAGE TITLE -->
 
-        <div class="camera-section card">
+        <section class="welcome">
 
-            <div class="section-title">
+            <div>
 
-                <h2>
+                <div class="page-badge">
+                    LIVE TRANSLATION
+                </div>
+
+                <h1>
                     Dịch ngôn ngữ ký hiệu
+                    <span>thông minh</span>
+                </h1>
 
-                    <span class="live">
-                        LIVE
-                    </span>
-                </h2>
+                <p>
+                    Sử dụng camera để nhận diện ngôn ngữ ký hiệu
+                    theo thời gian thực.
+                </p>
 
             </div>
 
+            <div class="system-status">
 
-            <div class="camera-preview">
+                <span class="status-dot"></span>
 
-                <div class="camera-placeholder">
+                Hệ thống đang hoạt động
 
-                    <img
-                        src="{{ url_for('video_feed') }}"
-                        class="camera-stream"
-                        alt="Camera SignBridge AI"
-                    >
+            </div>
 
-                    <div class="camera-status">
-                        🟢 Camera đang hoạt động
+        </section>
+
+
+        <!-- ================= DASHBOARD ================= -->
+
+        <section class="dashboard">
+
+
+            <!-- LEFT -->
+
+            <div class="left-column">
+
+
+                <!-- CAMERA -->
+
+                <div class="card camera-card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h2>
+                                Camera nhận diện
+                            </h2>
+
+                            <p>
+                                Đưa bàn tay vào khung hình
+                            </p>
+
+                        </div>
+
+                        <div class="live-badge">
+                            <span></span>
+                            LIVE
+                        </div>
+
+                    </div>
+
+
+                    <div class="camera-container">
+
+                        <img
+                            src="{{ url_for('video_feed') }}"
+                            class="camera-stream"
+                            alt="SignBridge Camera"
+                        >
+
+                        <div class="camera-overlay">
+
+                            <div class="camera-status">
+                                <span></span>
+                                Camera đang hoạt động
+                            </div>
+
+                            <div class="camera-guide">
+                                Đưa bàn tay vào giữa khung hình
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="camera-toolbar">
+
+                        <button class="camera-button">
+                            📷 Camera mặc định
+                        </button>
+
+                        <button
+                            class="camera-button"
+                            onclick="toggleFullscreen()"
+                        >
+                            ⛶ Toàn màn hình
+                        </button>
+
                     </div>
 
                 </div>
 
-                <div class="camera-bottom">
 
-                    <span>
-                        ▣ Camera mặc định ▼
-                    </span>
+                <!-- CURRENT RESULT -->
 
-                    <span>
-                        ⛶
-                    </span>
+                <div class="card result-card">
+
+                    <div class="result-heading">
+
+                        <div>
+                            <p class="small-title">
+                                KẾT QUẢ HIỆN TẠI
+                            </p>
+
+                            <h2 id="current-result">
+                                HELLO
+                            </h2>
+                        </div>
+
+
+                        <div class="confidence">
+
+                            <span>
+                                Độ tin cậy
+                            </span>
+
+                            <strong>
+                                96.2%
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="confidence-bar">
+
+                        <div
+                            class="confidence-progress"
+                            style="width: 96.2%"
+                        ></div>
+
+                    </div>
+
+
+                    <div class="result-actions">
+
+                        <button class="primary-button">
+                            🔊 Phát âm
+                        </button>
+
+                        <button class="secondary-button">
+                            🗑 Xóa
+                        </button>
+
+                    </div>
 
                 </div>
 
             </div>
 
 
+            <!-- RIGHT -->
 
-            <!-- RESULT -->
+            <aside class="right-column">
 
-            <div class="result-box">
 
-                <div>
+                <!-- SENTENCE -->
 
-                    <p>
-                        Kết quả hiện tại
-                    </p>
+                <div class="card sentence-card">
 
-                    <h2>
-                        HELLO
-                    </h2>
+                    <div class="card-header">
 
-                    <div class="confidence">
+                        <div>
 
-                        <span>
-                            Độ tin cậy: 96.2%
-                        </span>
+                            <h2>
+                                Câu đang dịch
+                            </h2>
 
-                        <div class="confidence-bar">
+                            <p>
+                                Nội dung được nhận diện
+                            </p>
 
-                            <div></div>
+                        </div>
+
+                        <button class="more-button">
+                            ⋮
+                        </button>
+
+                    </div>
+
+
+                    <div class="sentence-box">
+
+                        <div
+                            class="sentence-text"
+                            id="sentence-text"
+                        >
+                            HELLO
+                        </div>
+
+                        <div class="sentence-placeholder">
+                            Xin chào
+                        </div>
+
+                    </div>
+
+
+                    <button class="speak-large">
+                        🔊
+                        Phát âm câu
+                    </button>
+
+
+                    <div class="sentence-controls">
+
+                        <button>
+                            ↶ Hoàn tác
+                        </button>
+
+                        <button>
+                            🗑 Xóa câu
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- QUICK SUGGESTIONS -->
+
+                <div class="card suggestion-card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h2>
+                                Gợi ý nhanh
+                            </h2>
+
+                            <p>
+                                Các cụm từ thường dùng
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="suggestions">
+
+
+                        <button class="suggestion">
+
+                            <div class="suggestion-icon">
+                                👋
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    HELLO
+                                </strong>
+
+                                <span>
+                                    Xin chào
+                                </span>
+
+                            </div>
+
+                        </button>
+
+
+                        <button class="suggestion">
+
+                            <div class="suggestion-icon">
+                                ❤️
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    THANK YOU
+                                </strong>
+
+                                <span>
+                                    Cảm ơn
+                                </span>
+
+                            </div>
+
+                        </button>
+
+
+                        <button class="suggestion">
+
+                            <div class="suggestion-icon">
+                                😊
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    GOOD
+                                </strong>
+
+                                <span>
+                                    Tốt
+                                </span>
+
+                            </div>
+
+                        </button>
+
+
+                        <button class="suggestion">
+
+                            <div class="suggestion-icon">
+                                👋
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    GOODBYE
+                                </strong>
+
+                                <span>
+                                    Tạm biệt
+                                </span>
+
+                            </div>
+
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- STATISTICS -->
+
+                <div class="card statistics-card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h2>
+                                Thống kê hôm nay
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="statistics">
+
+                        <div class="stat">
+
+                            <strong>
+                                24
+                            </strong>
+
+                            <span>
+                                Lượt dịch
+                            </span>
+
+                        </div>
+
+
+                        <div class="stat">
+
+                            <strong>
+                                96.2%
+                            </strong>
+
+                            <span>
+                                Độ chính xác
+                            </span>
+
+                        </div>
+
+
+                        <div class="stat">
+
+                            <strong>
+                                12
+                            </strong>
+
+                            <span>
+                                Từ đã học
+                            </span>
 
                         </div>
 
@@ -387,321 +500,50 @@
 
                 </div>
 
+            </aside>
 
-                <button class="sound-button">
-                    🔊
-                </button>
+        </section>
 
-            </div>
-
+    </main>
 
 
-            <div class="camera-buttons">
+    <!-- ================= FOOTER ================= -->
 
-                <button class="pause">
-                    ❚❚ &nbsp; Tạm dừng
-                </button>
+    <footer class="footer">
 
-                <button class="stop">
-                    □ &nbsp; Dừng
-                </button>
-
-            </div>
-
+        <div>
+            © 2026 SignBridge AI
         </div>
 
-
-
-        <!-- RIGHT -->
-
-        <div class="right-column">
-
-
-            <!-- SENTENCE -->
-
-            <div class="card sentence-card">
-
-                <div class="section-title">
-
-                    <h2>
-                        Câu đang dịch
-                    </h2>
-
-                    <button>
-                        🗑 Xóa tất cả
-                    </button>
-
-                </div>
-
-
-                <div class="sentence">
-
-                    HELLO
-
-                </div>
-
-
-                <div class="sentence-buttons">
-
-                    <button>
-                        🔊 Phát âm
-                    </button>
-
-                    <button>
-                        ⌫ Xóa từ cuối
-                    </button>
-
-                    <button class="save">
-                        ♡ Lưu câu
-                    </button>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- QUICK WORDS -->
-
-            <div class="card quick-card">
-
-                <div class="section-title">
-
-                    <h2>
-                        Gợi ý nhanh
-                    </h2>
-
-                    <a href="#">
-                        Xem tất cả
-                    </a>
-
-                </div>
-
-
-                <div class="quick-grid">
-
-
-                    <div class="quick-item">
-
-                        <strong>HELLO</strong>
-
-                        <span>
-                            Xin chào 👋
-                        </span>
-
-                    </div>
-
-
-                    <div class="quick-item">
-
-                        <strong>THANK YOU</strong>
-
-                        <span>
-                            Cảm ơn 🙏
-                        </span>
-
-                    </div>
-
-
-                    <div class="quick-item">
-
-                        <strong>YES</strong>
-
-                        <span>
-                            Có 👍
-                        </span>
-
-                    </div>
-
-
-                    <div class="quick-item">
-
-                        <strong>NO</strong>
-
-                        <span>
-                            Không 👎
-                        </span>
-
-                    </div>
-
-
-                    <div class="quick-item">
-
-                        <strong>SORRY</strong>
-
-                        <span>
-                            Xin lỗi 😢
-                        </span>
-
-                    </div>
-
-
-                    <div class="quick-item">
-
-                        <strong>HELP</strong>
-
-                        <span>
-                            Giúp đỡ 🆘
-                        </span>
-
-                    </div>
-
-
-                    <div class="quick-item">
-
-                        <strong>GOOD</strong>
-
-                        <span>
-                            Tốt 😊
-                        </span>
-
-                    </div>
-
-
-                    <div class="quick-item">
-
-                        <strong>BAD</strong>
-
-                        <span>
-                            Xấu 😞
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
+        <div>
+            Phiên bản 1.0.0
         </div>
 
-    </section>
+    </footer>
+
+</div>
 
 
+<script>
 
-    <!-- BOTTOM -->
+function toggleFullscreen() {
 
-    <section class="bottom-grid">
+    const camera =
+        document.querySelector(".camera-container");
 
+    if (!document.fullscreenElement) {
 
-        <div class="card learning">
+        camera.requestFullscreen();
 
-            <div class="section-title">
+    } else {
 
-                <h2>
-                    Tiến độ học tập
-                </h2>
+        document.exitFullscreen();
 
-                <a href="#">
-                    Xem chi tiết
-                </a>
+    }
 
-            </div>
+}
 
-
-            <div class="learning-content">
-
-                <div class="big-progress">
-                    60%
-                </div>
-
-                <div>
-
-                    <h3>
-                        Ngôn ngữ ký hiệu cơ bản
-                    </h3>
-
-                    <p>
-                        Đã hoàn thành 12 / 20 bài học
-                    </p>
-
-                    <div class="large-progress">
-
-                        <div></div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="card recent">
-
-            <div class="section-title">
-
-                <h2>
-                    Hoạt động gần đây
-                </h2>
-
-                <a href="#">
-                    Xem tất cả
-                </a>
-
-            </div>
-
-
-            <div class="activity">
-
-                <div class="activity-icon">
-                    ✓
-                </div>
-
-                <div>
-
-                    <strong>
-                        Dịch từ "HELLO"
-                    </strong>
-
-                    <p>
-                        Độ tin cậy: 96.2%
-                    </p>
-
-                </div>
-
-                <span>
-                    2 phút trước
-                </span>
-
-            </div>
-
-
-            <div class="activity">
-
-                <div class="activity-icon">
-                    ✓
-                </div>
-
-                <div>
-
-                    <strong>
-                        Dịch từ "THANK YOU"
-                    </strong>
-
-                    <p>
-                        Độ tin cậy: 94.8%
-                    </p>
-
-                </div>
-
-                <span>
-                    5 phút trước
-                </span>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-</main>
-
-
-<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</script>
 
 </body>
-
 </html>
